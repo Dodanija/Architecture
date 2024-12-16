@@ -26,10 +26,16 @@ Kompiuterio CPU yra bendros paskirties mikroprogramuojamas valdiklis (MPC), kuri
 Architektūra yra registrinio pagrindo RISC (Wikipedia, 2024)
 \subsection{Adresų mašinos tipas}
 \subsubsection{AN/UYK-43}
-AN/UYK-43 yra dviejų adresų mašina (pvz: SET A32S15 TO LN(A32S10) \$) (CMS-2Y Programmer's Reference Manual for the AN/UYK-7 and AN/UYK-43.)
+AN/UYK-43 yra dviejų adresų mašina (pvz: SET A32S15 TO LN(A32S10) \$) (Fleet combat direction systems support activity code 8, 1987)
 \subsubsection{Intel i960}
 Intel i960 yra trijų adresų mašina (pvz: addo g2, g3, g4) (ManualsLib, n.d.)
 \subsection{Registrai}
+\subsubsection{Intel i960}
+Turi 32 bendrosios paskirties registrus - 16 globalių registrų ir 16 vietinių registrų. Registrų plotis - 32 bitai (Intel, n.d.). Specializuotos paskirties: 4 80 bitų "floating point" registrai (tiksliasniems skaičiams po kablelio) ir kontrolės registrai (interupt'ų valdymui) (Intel Corporation, n.d.).
+\subsubsection{AN/UYK-43}
+Bendrosios paskirties registrai: A registrai (kaupikliai): 8 registrai, 32 bitų pločio. Naudojami aritmetiniams ir loginėms operacijoms.
+B registrai (indeksavimo registrai): 7 registrai, 16 bitų pločio. Naudojami adresų skaičiavimams ir indeksavimui. Specializuoti registrai: P registras (programos skaitiklis): 16 bitų, naudojamas instrukcijų adresams skaičiuoti. S registrai (segmentų registrai): 8 registrai, 32 bitų pločio. Naudojami atminties segmentų valdymui ir adresų generavimui.
+Steko rodyklės registrai: 8 registrai, 16 bitų pločio. Naudojami steko valdymui. Atminties apsaugos registrai (SPR): 8 registrai. Apibrėžia atminties prieigos ribas ir režimus. Segmentų identifikacijos registrai (SIR): Naudojami saugumo ir prieigos kontrolės funkcijoms. Registrų duomenų pločiai: 16 bitų registrai: P registras, B registrai, steko rodyklės registrai. 32 bitų registrai: A registrai, S registrai, atminties apsaugos registrai (SPR). Instrukcijų valdymas: P registras seka programos vykdymo eigą. (Landwehr, C.E., Tretick, R., et al., 1987.)
 \subsection{Požymių bitai}
 \subsection{Duomenų plotis (Mašininis žodis)}
 \subsection{Atminties išdėstymas}
@@ -44,6 +50,10 @@ Intel i960 yra trijų adresų mašina (pvz: addo g2, g3, g4) (ManualsLib, n.d.)
 \subsection{Architektūros taikymo sritys}
 \subsection{Programinė įranga}
 \subsection{Emuliatoriai}
+\subsubsection{Intel i960}
+Yra emuliatorius: https://i960-emulator.software.informer.com/
+\subsubsection{AN/UYK-43}
+Emuliatoriaus nėra, nes įranga buvo naudojama JAV karinėje technikoje, todėl ne visa informacija yra viešai prieinama (Wikipedia, 2024).
 \section{References}
 \begin{itemize}
 \item CPU-World Forum, n.d. \textit{Intel i960 processor discussion.} Available at: \url{https://www.cpu-world.com/forum/viewtopic.php?p=74549} [Accessed 15 December 2024].
@@ -57,7 +67,10 @@ Intel i960 yra trijų adresų mašina (pvz: addo g2, g3, g4) (ManualsLib, n.d.)
 
 \item ManualsLib, n.d. \textit{Intel i960 Manual.} Available at: \url{https://www.manualslib.com/manual/1315143/Intel-I960.html} [Accessed 16 December 2024].
 
-\item Archive.org, 1986. \textit{CMS-2Y Programmer's Reference Manual for the AN/UYK-7 and AN/UYK-43.} Available at: \url{https://ia902907.us.archive.org/11/items/bitsavers_univacmilimmersReferenceManualfortheANUYK7andANUYK_23389579/CMS-2Y_Programmers_Reference_Manual_for_the_AN_UYK-7_and_AN_UYK-43_Oct86.pdf} [Accessed 16 December 2024].
+\item Fleet combat direction systems support activity code 8 \textit{CMS-2Y Programmer's Reference Manual for the AN/UYK-7 and AN/UYK-43.} Available at: \url{https://ia902907.us.archive.org/11/items/bitsavers_univacmilimmersReferenceManualfortheANUYK7andANUYK_23389579/CMS-2Y_Programmers_Reference_Manual_for_the_AN_UYK-7_and_AN_UYK-43_Oct86.pdf} [Accessed 16 December 2024].
+
+\item Intel Corporation, n.d. \textit{Intel 80960KB Datasheet.} Available at: \url{https://www.alldatasheet.com/datasheet-pdf/pdf/66071/INTEL/80960KB.html} [Accessed 16 December 2024].
+
 
 \item VIP Club MN, n.d. \textit{AN/UYK-43 Historical Overview.} Available at: \url{https://vipclubmn.org/cp32bit.html} [Accessed 15 December 2024].
 
