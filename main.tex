@@ -39,13 +39,17 @@ Steko rodyklės registrai: 8 registrai, 16 bitų pločio. Naudojami steko valdym
 \subsection{Požymių bitai}
 AN/UYK-43 architektūroje požymių bitai (flags) buvo naudojamos valdyti programos vykdymo srautą, sistemos konfigūraciją ir kitus veikimo parametrus. Buvo naudojami: FLAGS (LITEMFL - nustato, ar elementas yra konstanta, MULTVFL - nustato, ar elementas turi kelias reikšmes, PTHUNKFL - nustato, ar procedūros pradžia turi būti vykdomas kaip atskira posistemė, naudojant specialią komandą (LBJ B6), ETHUNKFL - veikia taip pat, kaip ir PTHUNKFL, bet taikomas procedūros pabaigai. Visi šitie požymių bitai yra sąlygos kodo požymių bitai), TFLAGS išplėčia FLAGS funkcionalumą ir naudojamas kaip pagalbinės, Cswitch  įjungia arba išjungia specifines funkcijas naudojant sistemines deklaracijas. (Fleet combat direction systems support activity code 8, 1986.)
 \subsubsection{Intel i960}
-Buvo naudojami požymių bitai (Flags): sąlygos kodo - 010, 001, palyginimo - 001, 010, 100, 000, aritmetinės kontrolės - AC.of, AC.om, AC.nif, pėdsakų (trace) - TC.i, TC.b, TC.c, TC.r, proceso kontrolės - PC.te, PC.em, PC.tfp.. (Intel Corporation, n.d.)
+Buvo naudojami požymių bitai (Flags): sąlygos kodo - 010, 001, palyginimo - 001, 010, 100, 000, aritmetinės kontrolės - AC.of, AC.om, AC.nif, pėdsakų (trace) - TC.i, TC.b, TC.c, TC.r, proceso kontrolės - PC.te, PC.em, PC.tfp. (Intel Corporation, n.d.)
 \subsection{Duomenų plotis (Mašininis žodis)}
 \subsubsection{Intel i960}
 Mašininis žodis - 32 bitai (Intel Corporation, n.d.)
 \subsubsection{AN/UYK-43}
 Mašininis žodis - 32 bitai (Landwehr, C.E., Tretick, R., et al., 1987.)
 \subsection{Atminties išdėstymas}
+\subsubsection{AN/UYK-43}
+Atminties tipas: Puslaidininkiai (SC) ir  magnetinė šerdis (MC) Atminties dydis: MC 32K, 32-bit žodžiai, SC 64K - 512K, 32-bit žodžiai. (HP-9020C/AN/UYK-43 Study, 1987)
+\subsubsection{Intel i960}
+Ištisinė 32 bitų atminties erdvė, be atminties segmentavimo, išskyrus išplėstą architektūrą, kuri galėjo palaikyti iki 2²²⁶ „objektų“, kiekvienas iki 2³² baitų. (Wikipedia, 2024.) Intel i960 efektyvusis adresų pločio dydis buvo 32 bitai, leidžiantis adresuoti iki 4 GB atminties vienoje plokščioje adresų erdvėje. Tipinis atminties kiekis, naudojamas sistemose, pagrįstose Intel i960, skyrėsi priklausomai nuo taikymo srities, nes procesorius buvo skirtas pramoninėms sistemoms, tinklo įrenginiams ir karinėms/aerokosminėms programoms. Štai suskirstymas pagal naudojimo atvejus: pramoninės sistemos (spausdintuvai, duomenų saugojimo valdikliai, kita pramoninė įranga) - atminties diapazonas: nuo 512 KB iki 4 MB, tinklo įranga (maršrutizatoriai, tinklo sąsajos plokštės) - atminties diapazonas: nuo 2 MB iki 16 MB, karinės ir aerokosminės sistemos - atminties diapazonas: nuo 16 MB iki 64 MB ar daugiau. (OpenAI, 2024.)
 \subsection{Virtuali atmintis}
 \subsubsection{Intel i960}
 Neturėjo virtualios atminties (Niekur nėra informacijos, kad architektūra tokią turėtų, todėl pasitikrinti buvo pateikta užklausa Chatgpt) "The Intel i960 microprocessor did not have built-in support for virtual memory in its standard versions. The i960 was designed primarily as an embedded processor, targeting real-time and embedded systems where virtual memory was not typically needed." (OpenAI, 2024).
@@ -115,6 +119,12 @@ User’s Guide.} Available at: \url{https://datasheets.chipdb.org/Intel/80960/ma
 \item OpenAI, 2024. Response generated using ChatGPT. Question: "Did AN/UYK-43 have virtual memory?" Answer: "The AN/UYK-43, a ruggedized military computer introduced by the U.S. Navy in the 1980s, did not have virtual memory in the traditional sense used by modern general-purpose computers." [Accessed on: 16 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
 
 \item OpenAI, 2024. Response generated using ChatGPT. Question: "What was the use of the Intel i960 in the Sega Model 2 console?" Answer: "The Intel i960 was used in the Sega Model 2 arcade game system as the main processor responsible for 3D graphics processing and game logic. It was a powerful RISC architecture processor that was at the time a high-performance computing and embedded system. Because of these features, the Intel i960 was a critical component that allowed the Sega Model 2 to achieve high levels of gaming graphics and performance, which was important for popular games such as Virtua Fighter 2, Daytona USA, and Sega Rally Championship." [Accessed on: 17 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
+
+\item OpenAI, 2024. Response generated using ChatGPT. Question: "Intel i960 What was  the (effective) width of the address?" Answer: "The effective address width of the Intel i960 was 32 bits, allowing it to address up to 4 GB of memory in a flat address space" [Accessed on: 18 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
+
+\item OpenAI, 2024. Response generated using ChatGPT. Question: "Intel i960 What was  the (effective) width of the address?" Answer: "The effective address width of the Intel i960 was 32 bits, allowing it to address up to 4 GB of memory in a flat address space" [Accessed on: 18 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
+
+\item OpenAI, 2024. Response generated using ChatGPT. Question: "What was the typical amount of memory with which the system was used? Intel i960" Answer: "The typical amount of memory used with systems based on the Intel i960 varied depending on the application, as the processor was designed for embedded systems, networking devices, and military/aerospace applications. Here’s a breakdown of typical cases: Embedded Systems (Printers, Storage Controllers, Industrial Equipment) - Memory Range: 512 KB to 4 MB, networking Equipment (Routers, Network Interface Cards) - memory Range: 2 MB to 16 MB, Military and Aerospace Systems - memory Range: 16 MB to 64 MB or more" [Accessed on: 18 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
 
 \end{itemize}
 
