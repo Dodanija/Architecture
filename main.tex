@@ -57,6 +57,7 @@ Neturėjo virtualios atminties (Niekur nėra informacijos, kad architektūra tok
 Neturėjo virtualios atminties (Niekur nėra informacijos, kad architektūra tokią turėtų, todėl pasitikrinti buvo pateikta užklausa Chatgpt) "The AN/UYK-43, a ruggedized military computer introduced by the U.S. Navy in the 1980s, did not have virtual memory in the traditional sense used by modern general-purpose computers." (OpenAI, 2024).
 \subsection{Komandų sistema (ISA)}
 \subsection{Adresavimo būdai}
+
 \subsection{I/O galimybės}
 \subsubsection{AN/UYK-43}
 UYK-43 vis dar pripažįstamas kompiuterių pramonėje kaip vienas geriausių įrenginių, greitai ir efektyviai priimančių didelius išorinių jutiklių ir kitų duomenų srautus. Po to, kai centriniai procesoriai atlieka reikalingus skaičiavimus ir priima sprendimus, šią informaciją galima greitai perduoti žmogui. Situacijose, kai į laivą nukreipta raketa ar artėja priešo orlaivis, mikrosekundės tampa itin svarbios. Laiku priimti tikslūs ir greiti sprendimai gali išgelbėti gyvybes. (32-bit Computers, Chapter 52, 2024.) Yra  po 1 I/O valdiklį kiekvienam CPU su 32 I/O kanalais. I/O grandinimas (chaining) leidžiamas naudojant I/O valdiklį. (HP-9020C/AN/UYK-43 Study, 1987.)
@@ -65,12 +66,17 @@ UYK-43 vis dar pripažįstamas kompiuterių pramonėje kaip vienas geriausių į
 \subsection{Pertraukimai}
 AN/UYK-43 uvo naudojami pertraukimai (interrupts). Intel i960 irgi buvo naudojami pertraukimai. Panašumai: abiejose architektūrose buvo naudojami prioritetiniai pertraukimai, leidžiantys valdyti skirtingų svarbos lygių užduotis. Taip pat abi sistemos turėjo nepertraukiamas pertrauktis. Skirtumai: Intel i960 turėjo automatinį konteksto išsaugojimą, o AN/UYK-43 rankinį per registrus išsaugojimą, i960 taip pat turėjo tiesioginę DMA sąsają o AN/UYK-43 neturėjo, i960 taip pat turėjo 32 programuojamus prioritetų lygius, o AN/UYK-43 fiksuotus. (Landwehr, C.E., Tretick, R., et al., 1987), (Intel Corporation, n.d.)
 \subsection{Duomenų tipai}
+\subsubsection{AN/UYK-43}
+Palaikė šiuos duomenų tipus: sveikasis skaičius, fiksuoto kablelio, slankiojo kablelio, simbolių tipas, loginis tipas (boolean). Ir egzotinius: statuso tipas (duomenys su baigtiniu reikšmių skaičiumi, neturinčiu jokios matematinės reikšmės), universalus tipas (bitų seka). Fiksuoto kablelio aritmetika buvo palaikoma naudojant nustatytą bitų skaičių, leidžiantį tiksliai atvaizduoti baigtines trupmenas. Slankiojo kablelio aritmetika buvo įgyvendinta su viengubo ir dvigubo tikslumo duomenų tipais, kurių ilgis buvo atitinkamai 32 ir 64 bitai. (Fleet combat direction systems support activity code 8, 1986.)
+\subsubsection{Intel i960}
+Palaikė šiuos duomenų tipus: bitas, bitų laukai, sveikasis skaičius (8, 16, 32, 64 bitų), įprastas skaičius (8, 16, 32, 64 bitų sveikasis skaičius be ženklo), trigubas žodis (96 bitai), keturgubas žodis (128 bitai). Procesorius palaiko fiksuoto kablelio aritmetiką naudodamas dvejeto papildinio kodavimą sveikiesiems skaičiams. (Intel, n.d.) Intel i960 mikroprocesorius palaikė tiek fiksuotojo, tiek slankiojo kablelio aritmetiką, tačiau tai priklausė nuo konkretaus i960 šeimos modelio. Fiksuotojo kablelio aritmetika visada buvo palaikoma aparatine įranga, o slankiojo kablelio aritmetika palaikoma aparatine įranga modeliuose su integruotu FPU (slankiojo kablelio bloku). Modeliuose be FPU slankiojo kablelio operacijos buvo atliekamos programinės emuliacijos būdu. (OpenAI, 2024.)
 \subsection{Greitaveika}
+
 \subsection{Spartinančioji atmintis}
 \subsubsection{AN/UYK-43}
 AN/UYK-43 naudojo spartinančią atmintį siekiant padidinti našumą (32-bit Computers, Chapter 55, 2024). Kompiuterio spartinančioji atmintis turėjo iki 16384 32 bitų žodžių talpą. Ji veikė kaip didelės spartos buferis tarp procesoriaus ir pagrindinės atminties. (HP-9020C/AN/UYK-43 Study, 1987).
 \subsubsection{Intel i960}
-Visi Intel i960 procesoriaus variantai naudojo instrukcijų (instruction), tačiau ne visi duomenų (data) spartinančiąją atmintį. Pavyzdžiui Intel i960 80960MC neturėjo duomenų spartinančiosios atminties, o 80960CF jau turėjo. Instrukcijų spartinančiosios atminties dydis buvo nuo 0.5 KB. iki 16 KB., o duomenų spartinančioji atmintis nuo 1 KB. iki 8 KB.
+Visi Intel i960 procesoriaus variantai naudojo instrukcijų (instruction), tačiau ne visi duomenų (data) spartinančiąją atmintį. Pavyzdžiui Intel i960 80960MC neturėjo duomenų spartinančiosios atminties, o 80960CF jau turėjo. Instrukcijų spartinančiosios atminties dydis buvo nuo 0.5 KB. iki 16 KB., o duomenų spartinančioji atmintis nuo 1 KB. iki 8 KB. (Wikipedia, 2024.)
 \subsection{Architektūros taikymo sritys}
 \subsubsection{AN/UYK-43}
 AN/UYK-43 buvo standartinis 32 bitų kompiuteris Jungtinių Amerikos valstijų laivyne, kurio panaudojimas buvo kariniuose laivuose ir povandeniniuose laivuose. (Wikipedia, 2024.) Tai yra universalūs kompiuteriai, naudojami taktinių skaitmeninių sistemų ir posistemių veikloje (pvz., vadovavimo ir kontrolės, žvalgybos bei taktinių ginklų sistemose ir posistemėse) (Defense Technical Information Center, 1981). Daugiau konkrečios informacijos negalima pasiekti, nes tai yra karinė įranga.
@@ -130,6 +136,8 @@ User’s Guide.} Available at: \url{https://datasheets.chipdb.org/Intel/80960/ma
 \item OpenAI, 2024. Response generated using ChatGPT. Question: "Intel i960 What was  the (effective) width of the address?" Answer: "The effective address width of the Intel i960 was 32 bits, allowing it to address up to 4 GB of memory in a flat address space" [Accessed on: 18 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
 
 \item OpenAI, 2024. Response generated using ChatGPT. Question: "What was the typical amount of memory with which the system was used? Intel i960" Answer: "The typical amount of memory used with systems based on the Intel i960 varied depending on the application, as the processor was designed for embedded systems, networking devices, and military/aerospace applications. Here’s a breakdown of typical cases: Embedded Systems (Printers, Storage Controllers, Industrial Equipment) - Memory Range: 512 KB to 4 MB, networking Equipment (Routers, Network Interface Cards) - memory Range: 2 MB to 16 MB, Military and Aerospace Systems - memory Range: 16 MB to 64 MB or more" [Accessed on: 18 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
+
+\item OpenAI, 2024. Response generated using ChatGPT. Question: "Intel i960 Was fixed point or floating point supported by hardware and how?" Answer: "The Intel i960 microprocessor supported both fixed-point and floating-point arithmetic, but in different ways depending on the specific model of the i960 family. Fixed-Point Arithmetic: Always supported by hardware. Floating-Point Arithmetic: Supported by hardware in models with an integrated FPU, otherwise handled via software emulation." [Accessed on: 18 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
 
 \end{itemize}
 
