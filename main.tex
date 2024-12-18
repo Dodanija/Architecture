@@ -14,28 +14,28 @@
 \section{Architektūrų palyginimas}
 \subsection{Elementinė bazė ir fizinės savybės}
 \subsubsection{AN/UYK-43}
-AN/UYK-43 buvo sudarytas iš integrinių grandynų (IC) ir didelio integracijos masto (LSI). Saugojimo atminties technologijoje buvo naudojami puslaidininkiai (32-bit Computers, Chapter 55, 2024.). Svoris: 667 kg. - 757 kg. Dydis: 1.83 m. x 50.3 cm. x 56.7 cm. Energijos suvartojimas: 5.5 kW (aušinant oru), 4.7 kW (aušinant vandeniu) (Defense Technical Information Center, 1987).
+AN/UYK-43 buvo sudarytas iš integrinių grandynų (IC) ir didelio integracijos masto (LSI). Saugojimo atminties technologijoje buvo naudojami puslaidininkiai (VIP Club, 2024.). Svoris: 667 kg. - 757 kg. Dydis: 1.83 m. x 50.3 cm. x 56.7 cm. Energijos suvartojimas: 5.5 kW (aušinant oru), 4.7 kW (aušinant vandeniu) (Defense Technical Information Center, 1987, p. 14.).
 
 \subsubsection{Intel i960}
-Intel i960 buvo sudarytas iš tranzistorių ir buvo labai didelio integracijos masto (VLSI) (Wikipedia, 2024). Svoris: 24 g (keramikinis) (CPU-World Forum, n.d.). Dydis: 3.5 cm. x 3.5 cm. x 1.54 mm (Intel, n.d.). Energijos suvartojimas: 3.3 W - 5 W (Wikipedia, 2024).
+Intel i960 buvo sudarytas iš tranzistorių ir buvo labai didelio integracijos masto (VLSI) (Wikipedia, 2024). Svoris: 24 g (keramikinis) (CPU-World Forum, n.d.). Dydis: 3.5 cm. x 3.5 cm. x 1.54 mm (Intel, n.d. p. 30.). Energijos suvartojimas: 3.3 W - 5 W (Wikipedia, 2024.).
 
 \subsection{Architektūra}
 \subsubsection{AN/UYK-43}
-Kompiuterio CPU yra bendros paskirties mikroprogramuojamas valdiklis (MPC), kuris vykdo AN/UYK-43 instrukcijų rinkinio architektūrą (ISA) (HP-9020C/AN/UYK-43 Study, 1987). AN/UYK-43 naudoja tiesioginio kodo kalbą, gautą iš CMS-2Y asemblerio kalbos. Ši sistema leidžia integruoti mašinos instrukcijas į CMS-2Y programas (Fleet combat direction systems support activity code 8, 1986.)
+Kompiuterio CPU yra bendros paskirties mikroprogramuojamas valdiklis (MPC), kuris vykdo AN/UYK-43 instrukcijų rinkinio architektūrą (ISA) (HP-9020C/AN/UYK-43 Study, 1987, p. 22.). AN/UYK-43 naudoja tiesioginio kodo kalbą, gautą iš CMS-2Y asemblerio kalbos. Ši sistema leidžia integruoti mašinos instrukcijas į CMS-2Y programas (Fleet combat direction systems support activity code 8, 1986, p. 462-540)
 \subsubsection{Intel i960}
 Architektūra yra registrinio pagrindo RISC (Wikipedia, 2024)
 \subsection{Adresų mašinos tipas}
 \subsubsection{AN/UYK-43}
-AN/UYK-43 yra dviejų adresų mašina (pvz: SET A32S15 TO LN(A32S10) \$) (Fleet combat direction systems support activity code 8, 1987)
+AN/UYK-43 yra dviejų adresų mašina (pvz: SET A32S15 TO LN(A32S10) \$) (Fleet combat direction systems support activity code 8, 1987, p. 214.)
 \subsubsection{Intel i960}
-Intel i960 yra trijų adresų mašina (pvz: addo g2, g3, g4) (ManualsLib, n.d.)
+Intel i960 yra trijų adresų mašina (pvz: addo g2, g3, g4) (ManualsLib, n.d. p. 296.)
 \subsection{Registrai}
 \subsubsection{Intel i960}
-Turi 32 bendrosios paskirties registrus - 16 globalių registrų ir 16 vietinių registrų. Registrų plotis - 32 bitai (Intel, n.d.). Specializuotos paskirties: 4 80 bitų "floating point" registrai (tiksliasniems skaičiams po kablelio) ir kontrolės registrai (interupt'ų valdymui) (Intel Corporation, n.d.).
+Turi 32 bendrosios paskirties registrus - 16 globalių registrų ir 16 vietinių registrų. Registrų plotis - 32 bitai (Intel, n.d, p. 1.). Specializuotos paskirties: 4 80 bitų "floating point" registrai (tiksliasniems skaičiams po kablelio) ir kontrolės registrai (interupt'ų valdymui) (Intel Corporation, n.d, p. 6.).
 \subsubsection{AN/UYK-43}
 Bendrosios paskirties registrai: A registrai (kaupikliai): 8 registrai, 32 bitų pločio. Naudojami aritmetiniams ir loginėms operacijoms.
 B registrai (indeksavimo registrai): 7 registrai, 16 bitų pločio. Naudojami adresų skaičiavimams ir indeksavimui. Specializuoti registrai: P registras (programos skaitiklis): 16 bitų, naudojamas instrukcijų adresams skaičiuoti. S registrai (segmentų registrai): 8 registrai, 32 bitų pločio. Naudojami atminties segmentų valdymui ir adresų generavimui.
-Steko rodyklės registrai: 8 registrai, 16 bitų pločio. Naudojami steko valdymui. Atminties apsaugos registrai (SPR): 8 registrai. Apibrėžia atminties prieigos ribas ir režimus. Segmentų identifikacijos registrai (SIR): Naudojami saugumo ir prieigos kontrolės funkcijoms. Registrų duomenų pločiai: 16 bitų registrai: P registras, B registrai, steko rodyklės registrai. 32 bitų registrai: A registrai, S registrai, atminties apsaugos registrai (SPR). Instrukcijų valdymas: P registras seka programos vykdymo eigą. (Landwehr, C.E., Tretick, R., et al., 1987.)
+Steko rodyklės registrai: 8 registrai, 16 bitų pločio. Naudojami steko valdymui. Atminties apsaugos registrai (SPR): 8 registrai. Apibrėžia atminties prieigos ribas ir režimus. Segmentų identifikacijos registrai (SIR): Naudojami saugumo ir prieigos kontrolės funkcijoms. Registrų duomenų pločiai: 16 bitų registrai: P registras, B registrai, steko rodyklės registrai. 32 bitų registrai: A registrai, S registrai, atminties apsaugos registrai (SPR). Instrukcijų valdymas: P registras seka programos vykdymo eigą. (Landwehr, C.E., Tretick, R., et al., 1987, p. 21 - 22.)
 \subsection{Požymių bitai}
 AN/UYK-43 architektūroje požymių bitai (flags) buvo naudojamos valdyti programos vykdymo srautą, sistemos konfigūraciją ir kitus veikimo parametrus. Buvo naudojami: FLAGS (LITEMFL - nustato, ar elementas yra konstanta, MULTVFL - nustato, ar elementas turi kelias reikšmes, PTHUNKFL - nustato, ar procedūros pradžia turi būti vykdomas kaip atskira posistemė, naudojant specialią komandą (LBJ B6), ETHUNKFL - veikia taip pat, kaip ir PTHUNKFL, bet taikomas procedūros pabaigai. Visi šitie požymių bitai yra sąlygos kodo požymių bitai), TFLAGS išplėčia FLAGS funkcionalumą ir naudojamas kaip pagalbinės, Cswitch  įjungia arba išjungia specifines funkcijas naudojant sistemines deklaracijas. (Fleet combat direction systems support activity code 8, 1986.)
 \subsubsection{Intel i960}
@@ -47,7 +47,7 @@ Mašininis žodis - 32 bitai (Intel Corporation, n.d.)
 Mašininis žodis - 32 bitai (Landwehr, C.E., Tretick, R., et al., 1987.)
 \subsection{Atminties išdėstymas}
 \subsubsection{AN/UYK-43}
-Atminties tipas: Puslaidininkiai (SC) ir  magnetinė šerdis (MC) Atminties dydis: MC 32K, 32-bit žodžiai, SC 64K - 512K, 32-bit žodžiai. (HP-9020C/AN/UYK-43 Study, 1987)
+Atminties tipas: Puslaidininkiai (SC) ir  magnetinė šerdis (MC) Atminties dydis: MC 32K, 32-bit žodžiai, SC 64K - 512K, 32-bit žodžiai. (Systems Exploration, Inc, 1987.)
 \subsubsection{Intel i960}
 Ištisinė 32 bitų atminties erdvė, be atminties segmentavimo, išskyrus išplėstą architektūrą, kuri galėjo palaikyti iki 2²²⁶ „objektų“, kiekvienas iki 2³² baitų. (Wikipedia, 2024.) Intel i960 efektyvusis adresų pločio dydis buvo 32 bitai, leidžiantis adresuoti iki 4 GB atminties vienoje plokščioje adresų erdvėje. Tipinis atminties kiekis, naudojamas sistemose, pagrįstose Intel i960, skyrėsi priklausomai nuo taikymo srities, nes procesorius buvo skirtas pramoninėms sistemoms, tinklo įrenginiams ir karinėms/aerokosminėms programoms. Štai suskirstymas pagal naudojimo atvejus: pramoninės sistemos (spausdintuvai, duomenų saugojimo valdikliai, kita pramoninė įranga) - atminties diapazonas: nuo 512 KB iki 4 MB, tinklo įranga (maršrutizatoriai, tinklo sąsajos plokštės) - atminties diapazonas: nuo 2 MB iki 16 MB, karinės ir aerokosminės sistemos - atminties diapazonas: nuo 16 MB iki 64 MB ar daugiau. (OpenAI, 2024.)
 \subsection{Virtuali atmintis}
@@ -57,7 +57,7 @@ Neturėjo virtualios atminties (Niekur nėra informacijos, kad architektūra tok
 Neturėjo virtualios atminties (Niekur nėra informacijos, kad architektūra tokią turėtų, todėl pasitikrinti buvo pateikta užklausa Chatgpt) "The AN/UYK-43, a ruggedized military computer introduced by the U.S. Navy in the 1980s, did not have virtual memory in the traditional sense used by modern general-purpose computers." (OpenAI, 2024).
 \subsection{Komandų sistema (ISA)}
 \subsubsection{AN/UYK-43}
-Komandų sistema: AN/UYK-43 naudoja tiesioginio kodo kalbą, gautą iš CMS-2Y asemblerio kalbos. Ši sistema leidžia integruoti mašinos instrukcijas į CMS-2Y programas. Instrukcijos yra suskirstytos į aritmetines ir logines operacijas, duomenų perkėlimo, srauto valdymo, sistemos ir specialiosios. [nenurodyta, kurias palaiko instrukcijas] Palaiko 220 instrukcijų (Fleet combat direction systems support activity code 8, 1986.) AN/UYK-43 kompiuterio instrukcijų rinkinys turi daugiau nei 220 pagrindinių pilno ir pusinio žodžio instrukcijų, kurios teikia operacijas tiesioginiam ir netiesioginiam atminties adresavimui, kintamo ilgio simbolių adresavimui bei privilegijuotam ir neprivilegijuotam vykdymui. (HP-9020C/AN/UYK-43 Study, 1987) Pavyzdžiai:
+Komandų sistema: AN/UYK-43 naudoja tiesioginio kodo kalbą, gautą iš CMS-2Y asemblerio kalbos. Ši sistema leidžia integruoti mašinos instrukcijas į CMS-2Y programas. Instrukcijos yra suskirstytos į aritmetines ir logines operacijas, duomenų perkėlimo, srauto valdymo, sistemos ir specialiosios. [nenurodyta, kurias palaiko instrukcijas] Palaiko 220 instrukcijų (Fleet combat direction systems support activity code 8, 1986.) AN/UYK-43 kompiuterio instrukcijų rinkinys turi daugiau nei 220 pagrindinių pilno ir pusinio žodžio instrukcijų, kurios teikia operacijas tiesioginiam ir netiesioginiam atminties adresavimui, kintamo ilgio simbolių adresavimui bei privilegijuotam ir neprivilegijuotam vykdymui. (Systems Exploration, Inc, 1987.) Pavyzdžiai:
 \item SET A TO B \$
 \item MOVE A TO B \$
 \item PROCEDURE CHECKIT INPUT V1,V2 
@@ -69,7 +69,7 @@ Komandų sistema: AN/UYK-43 naudoja tiesioginio kodo kalbą, gautą iš CMS-2Y a
 \item ELSE RETURN (0) \$
 \item END-FUNCTION TPOS \$
 \subsubsection{Intel i960}
-Naudoja RISC komandų sistemą. (Wikipedia, 2024.) Instrukcijos yra suskirstytos į: duomenų judėjimo, aritmetinių (eilinių ir sveikųjų skaičių), loginių, bitų ir bitų laukų, palyginimo, šakojimosi, kvietimo / grįžimo, klaidų, derinimo, procesoriaus valdymo klases. 80960KB procesoriuje išplėčia esamas klases ir prideda naujas grupes: sveikųjų skaičių pavertimas realiaisiais, slankiojo kablelio, sinchroninio judėjimo ir įkrovimo, dešimtainės. (Bitsavers, 1988.) Palaikė šias instrukcijas: register-to-register, immediate, memory access - short, memory access - long, control transfer (Intel 80960KB Datasheet). Turi apie 150 - 200 instrukcijų (Bitsavers, 1988.). Pavyzdžiai: 
+Naudoja RISC komandų sistemą. (Wikipedia, 2024.) Instrukcijos yra suskirstytos į: duomenų judėjimo, aritmetinių (eilinių ir sveikųjų skaičių), loginių, bitų ir bitų laukų, palyginimo, šakojimosi, kvietimo / grįžimo, klaidų, derinimo, procesoriaus valdymo klases. 80960KB procesoriuje išplėčia esamas klases ir prideda naujas grupes: sveikųjų skaičių pavertimas realiaisiais, slankiojo kablelio, sinchroninio judėjimo ir įkrovimo, dešimtainės. (Intel, 1988.) Palaikė šias instrukcijas: register-to-register, immediate, memory access - short, memory access - long, control transfer (Intel 80960KB Datasheet). Turi apie 150 - 200 instrukcijų (Intel, 1988.). Pavyzdžiai: 
 \item addo g5, g9, g7
 \item subi r3, r5, r6
 \item lda 0xfab3, r12
@@ -85,7 +85,7 @@ i960 - mažo lygmens, asemblerio stiliaus, naudojant registrus ir tiesiogines at
 AN/UYK-43 palaikė šiuos adresavimo būdus: tiesioginis adresavimas, netiesioginis adresavimas, indeksuotas adresavimas, santykinis adresavimas, adreso poslinkio skaičiavimas. (CMS-2Y Programmer's Reference Manual for the AN/UYK-7 and AN/UYK-43, 1986.) O Intel i960 naudojo šiuos būdus: absoliutus adresavimas, registru netiesioginis adresavimas, registru netiesioginis su poslinkiu, registru netiesioginis su poslinkiu ir indeksu, indeksas su poslinkiu, instrukcijos rodyklės su poslinkiu. (Intel, 1997.) Panašūs buvo: netiesioginis adresavimas, indeksuotas adresavimas, tiesioginis ir absoliutus adresavimas. Skiriasi:  AN/UYK-43 leidžia derinti tiesiogiai koduojamus vardus ir adreso poslinkius, kas nėra aprašyta Intel i960, taip pat i960 leidžia derinti bazinį adresą, indeksą ir poslinkį, o AN/UYK-43 ne.
 \subsection{I/O galimybės}
 \subsubsection{AN/UYK-43}
-UYK-43 vis dar pripažįstamas kompiuterių pramonėje kaip vienas geriausių įrenginių, greitai ir efektyviai priimančių didelius išorinių jutiklių ir kitų duomenų srautus. Po to, kai centriniai procesoriai atlieka reikalingus skaičiavimus ir priima sprendimus, šią informaciją galima greitai perduoti žmogui. Situacijose, kai į laivą nukreipta raketa ar artėja priešo orlaivis, mikrosekundės tampa itin svarbios. Laiku priimti tikslūs ir greiti sprendimai gali išgelbėti gyvybes. (32-bit Computers, Chapter 52, 2024.) Yra  po 1 I/O valdiklį kiekvienam CPU su 32 I/O kanalais. I/O grandinimas (chaining) leidžiamas naudojant I/O valdiklį. (HP-9020C/AN/UYK-43 Study, 1987.)
+UYK-43 vis dar pripažįstamas kompiuterių pramonėje kaip vienas geriausių įrenginių, greitai ir efektyviai priimančių didelius išorinių jutiklių ir kitų duomenų srautus. Po to, kai centriniai procesoriai atlieka reikalingus skaičiavimus ir priima sprendimus, šią informaciją galima greitai perduoti žmogui. Situacijose, kai į laivą nukreipta raketa ar artėja priešo orlaivis, mikrosekundės tampa itin svarbios. Laiku priimti tikslūs ir greiti sprendimai gali išgelbėti gyvybes. (VIP Club, 2024.) Yra  po 1 I/O valdiklį kiekvienam CPU su 32 I/O kanalais. I/O grandinimas (chaining) leidžiamas naudojant I/O valdiklį. (Systems Exploration, Inc, 1987.)
 \subsubsection{Intel i960}
 80960Rx procesoriai buvo žymimi kaip I/O procesoriai ir turėjo PCI magistralės (2.1 arba 2.2 versijos, priklausomai nuo varianto) įgyvendinimą bei 80960Jx branduolį. Jie galėjo būti naudojami pagrindinėse plokštėse kaip integruoti PCI įrenginiai, taip pat PCI išplėtimo kortose. (Wikipedia, 2024.)
 \subsection{Pertraukimai}
@@ -99,10 +99,10 @@ Palaikė šiuos duomenų tipus: bitas, bitų laukai, sveikasis skaičius (8, 16,
 \subsubsection{AN/UYK-43}
 Informacijos internete rasti nepavyko. Specifinės techninės detalės, tokios kaip taktinių generatorių dažniai, ciklų skaičius vienai komandai (CPI) ir tikslūs komandų vykdymo greičiai, nėra plačiai dokumentuotos viešai prieinamuose šaltiniuose. (OpenAI, 2024.)
 \subsubsection{Intel i960}
-Procesoriaus taktinis dažnis: 10 MHz iki 100 MHz. (Wikipedia, 2024.) Intel i960 (80960JF versija) apdorojoma daugumą komandų su vieno vykdymo ciklu. (Intel, n.d.) i960 80960KB procesorius užtikrina vidutinį komandų vykdymo greitį 7,5 milijono komandų per sekundę (7,5 MIPS) esant 20 MHz taktiniam dažniui. 10 milijonų komandų per sekundę (10 MIPS) esant 25 MHz taktiniam dažniui. (Bitsavers, 1988.)
+Procesoriaus taktinis dažnis: 10 MHz iki 100 MHz. (Wikipedia, 2024.) Intel i960 (80960JF versija) apdorojoma daugumą komandų su vieno vykdymo ciklu. (Intel, n.d.) i960 80960KB procesorius užtikrina vidutinį komandų vykdymo greitį 7,5 milijono komandų per sekundę (7,5 MIPS) esant 20 MHz taktiniam dažniui. 10 milijonų komandų per sekundę (10 MIPS) esant 25 MHz taktiniam dažniui. (Intel, 1988.)
 \subsection{Spartinančioji atmintis}
 \subsubsection{AN/UYK-43}
-AN/UYK-43 naudojo spartinančią atmintį siekiant padidinti našumą (32-bit Computers, Chapter 55, 2024). Kompiuterio spartinančioji atmintis turėjo iki 16384 32 bitų žodžių talpą. Ji veikė kaip didelės spartos buferis tarp procesoriaus ir pagrindinės atminties. (HP-9020C/AN/UYK-43 Study, 1987).
+AN/UYK-43 naudojo spartinančią atmintį siekiant padidinti našumą (VIP Club, 2024.). Kompiuterio spartinančioji atmintis turėjo iki 16384 32 bitų žodžių talpą. Ji veikė kaip didelės spartos buferis tarp procesoriaus ir pagrindinės atminties. (Systems Exploration, Inc, 1987.).
 \subsubsection{Intel i960}
 Visi Intel i960 procesoriaus variantai naudojo instrukcijų (instruction), tačiau ne visi duomenų (data) spartinančiąją atmintį. Pavyzdžiui Intel i960 80960MC neturėjo duomenų spartinančiosios atminties, o 80960CF jau turėjo. Instrukcijų spartinančiosios atminties dydis buvo nuo 0.5 KB. iki 16 KB., o duomenų spartinančioji atmintis nuo 1 KB. iki 8 KB. (Wikipedia, 2024.)
 \subsection{Architektūros taikymo sritys}
@@ -114,7 +114,7 @@ Intel i960 procesoriai buvo naudojami RAID valdikliuose, tokiuose kaip Adaptec A
 \subsubsection{AN/UYK-43}
 Standartinė AN/UYK-43 Executive (SDEX/43) operacinė sistema. SDEX/43 yra
 užkoduotas ir prižiūrimas naudojant laivyno standartinę MTASS/L programą. MTASS/L dokumentuotas pagal MIL-STD-1679 reikalavimus. Kitos dvi galimos operacinės sistemos yra RSS ir ATEX. Sistema turi du kalbos
-procesorius: CMS-2L kompiliatorių ir MACRO/L assembler'į.(HP-9020C/AN/UYK-43 Study, 1987.) AN/UYK-43 ir susijusiems UYK bei AYK serijos kompiuteriams buvo naudojama standartizuota programavimo kalba CMS-2, sukurta Rand Corporation. (Wikipedia, 2024.) Kita informacija nėra pasiekiama.
+procesorius: CMS-2L kompiliatorių ir MACRO/L assembler'į.(Systems Exploration, Inc, 1987.) AN/UYK-43 ir susijusiems UYK bei AYK serijos kompiuteriams buvo naudojama standartizuota programavimo kalba CMS-2, sukurta Rand Corporation. (Wikipedia, 2024.) Kita informacija nėra pasiekiama.
 \subsubsection{Intel i960}
 Intel i960 procesorių šeimą palaiko daugiau nei 40 tiekėjų, siūlančių daugiau nei 100 kūrimo įrankių, tokių kaip įterptiniai emuliatoriai, kompiliatoriai, operacinės sistemos, vertinimo plokštės, surinkėjai, derintojai (gdb960), stebėjimo įrankiai (MON960) ir daugelis kitų. Šie įrankiai padeda sutrumpinti tiek kūrimo ciklą, tiek laiką, reikalingą produktui patekti į rinką. (Intel, 2006.) „CTOOLS960“ ir „GNU/960“, C/C++ kompiliatoriai buvo dalis šių įrankių rinkinių.  Derintojai: „dmp960“, „gdmp960“ – disasembleriai ir objektinių failų iškrovėjai. Profiliuotojai: „gcov960“ – kodo padengimo analizatorius. „ghist960“ – statistinis vykdymo profiliuotojas. „xlate960“ – surinkimo kalbos konverteris. „lnk960“, „gld960“ – jungikliai. Buvo prieinamos šitos bibliotekos: MON960“ – bibliotekos inicializacija statistiniam profiliavimui. „IxWorks“ – naudojama su statistinio profiliavimo įrankiu „ghist960“.(Inter Corporation, n.d.) Tam tikra įranga yra prieinama šiandien (https://www.industry-plaza.com/embedded-software-development-tools-for-p58782.html)
 \subsection{Emuliatoriai}
@@ -125,11 +125,14 @@ Emuliatoriaus nėra, nes įranga buvo naudojama JAV karinėje technikoje, todėl
 \section{References}
 \begin{itemize}
 
-\item Bitsavers, 1988. \textit{Intel 80960KB Programmer's Reference Manual.} Available at: \url{http://bitsavers.informatik.uni-stuttgart.de/components/intel/i960/80960KB_Programmers_Reference_Manual_Mar88.pdf} [Accessed 16 December 2024].
+\item Intel, 1988. \textit{Intel 80960KB Programmer's Reference Manual.} Available at: \url{http://bitsavers.informatik.uni-stuttgart.de/components/intel/i960/80960KB_Programmers_Reference_Manual_Mar88.pdf} [Accessed 16 December 2024].
+
 \item CPU-World Forum, n.d. \textit{Intel i960 processor discussion.} Available at: \url{https://www.cpu-world.com/forum/viewtopic.php?p=74549} [Accessed 15 December 2024].
+
 \item Defense Technical Information Center, 1987. \textit{AN/UYK-43 Computer System Specifications.} Available at: \url{https://apps.dtic.mil/sti/tr/pdf/ADA188056.pdf} [Accessed 16 December 2024].
-\item Defense Technical Information Center, 1981. \textit{Issues Concerning the AN/UYK-43 and AN/UYK-44 computer development--
-competition and ada transition.} Available at: \url{https://apps.dtic.mil/sti/pdfs/AD1174611.pdf} [Accessed 17 December 2024].
+
+\item Defense Technical Information Center, 1981. \textit{Issues Concerning the AN/UYK-43 and AN/UYK-44 computer development--competition and ada transition.} Available at: \url{https://apps.dtic.mil/sti/pdfs/AD1174611.pdf} [Accessed 17 December 2024].
+
 \item Landwehr, C.E., Tretick, R., et al., 1987. \textit{1987 Landwehr Tretick Study.} Available at: \url{http://www.landwehr.org/1987-landwehr-tretick-etal.pdf} [Accessed 15 December 2024].
 
 \item Intel, n.d. \textit{Intel i960 Product Specifications.} Available at: \url{https://community.intel.com/cipcp26785/attachments/cipcp26785/processors/47453/1/INTEL-27300103.PDF} [Accessed 15 December 2024].
@@ -137,7 +140,7 @@ competition and ada transition.} Available at: \url{https://apps.dtic.mil/sti/pd
 \item Intel, 2006. \textit{Intel i960 Development Tools.} Available at: \url{http://developer.intel.com/design/i960/devtools/} [Accessed 17 December 2024].
 
 
-\item Mouser Electronics, n.d. \textit{Intel Corporation i960 Linecards.} Available at: \url{https://www.mouser.com/catalog/specsheets/intel%20corporation_i960_linecards.pdf} [Accessed 15 December 2024].
+\item Intel, 2002. \textit{Intel Corporation i960 Linecards.} Available at: \url{https://www.mouser.com/catalog/specsheets/intel%20corporation_i960_linecards.pdf} [Accessed 15 December 2024].
 
 \item ManualsLib, n.d. \textit{Intel i960 Manual.} Available at: \url{https://www.manualslib.com/manual/1315143/Intel-I960.html} [Accessed 16 December 2024].
 
@@ -151,11 +154,13 @@ competition and ada transition.} Available at: \url{https://apps.dtic.mil/sti/pd
 User’s Guide.} Available at: \url{https://datasheets.chipdb.org/Intel/80960/manuals/48527707.pdf} [Accessed 17 December 2024].
 
 
-\item 32-bit Computers, Chapter 52, 2024. \textit{AN/UYK-43 Historical Overview.} Available at: \url{https://vipclubmn.org/cp32bit.html} [Accessed 15 December 2024].
+\item VIP Club, 2024. \textit{32-bit Computers, Chapter 52.} Available at: \url{https://vipclubmn.org/cp32bit.html} [Accessed 15 December 2024].
 
 \item Wikipedia, 2024. \textit{Intel i960.} Available at: \url{https://en.wikipedia.org/wiki/Intel_i960} [Accessed 15 December 2024].
 
-\item HP-9020C/AN/UYK-43 Study, 1987. \textit{System Architecture Analysis.} \url{https://apps.dtic.mil/sti/tr/pdf/ADA188056.pdf} [Accessed 15 December 2024].
+\item Wikipedia, 2024. \textit{Intel i960.} Available at: \url{https://en.wikipedia.org/wiki/AN/UYK-43} [Accessed 15 December 2024].
+
+\item Systems Exploration, Inc, 1987. \textit{HP-9020C/AN/UYK-43 Study} \url{https://apps.dtic.mil/sti/tr/pdf/ADA188056.pdf} [Accessed 15 December 2024].
 
 \item OpenAI, 2024. Response generated using ChatGPT. Question: "Did Intel i960 have virtual memory?" Answer: "The Intel i960 microprocessor did not have built-in support for virtual memory in its standard versions. The i960 was designed primarily as an embedded processor, targeting real-time and embedded systems where virtual memory was not typically needed." [Accessed on: 16 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
 
