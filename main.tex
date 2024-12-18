@@ -71,7 +71,10 @@ Palaikė šiuos duomenų tipus: sveikasis skaičius, fiksuoto kablelio, slankioj
 \subsubsection{Intel i960}
 Palaikė šiuos duomenų tipus: bitas, bitų laukai, sveikasis skaičius (8, 16, 32, 64 bitų), įprastas skaičius (8, 16, 32, 64 bitų sveikasis skaičius be ženklo), trigubas žodis (96 bitai), keturgubas žodis (128 bitai). Procesorius palaiko fiksuoto kablelio aritmetiką naudodamas dvejeto papildinio kodavimą sveikiesiems skaičiams. (Intel, n.d.) Intel i960 mikroprocesorius palaikė tiek fiksuotojo, tiek slankiojo kablelio aritmetiką, tačiau tai priklausė nuo konkretaus i960 šeimos modelio. Fiksuotojo kablelio aritmetika visada buvo palaikoma aparatine įranga, o slankiojo kablelio aritmetika palaikoma aparatine įranga modeliuose su integruotu FPU (slankiojo kablelio bloku). Modeliuose be FPU slankiojo kablelio operacijos buvo atliekamos programinės emuliacijos būdu. (OpenAI, 2024.)
 \subsection{Greitaveika}
-
+\subsubsection{AN/UYK-43}
+Informacijos internete rasti nepavyko. Specifinės techninės detalės, tokios kaip taktinių generatorių dažniai, ciklų skaičius vienai komandai (CPI) ir tikslūs komandų vykdymo greičiai, nėra plačiai dokumentuotos viešai prieinamuose šaltiniuose. (OpenAI, 2024.)
+\subsubsection{Intel i960}
+Procesoriaus taktinis dažnis: 10 MHz iki 100 MHz. (Wikipedia, 2024.) Intel i960 (80960JF versija) apdorojoma daugumą komandų su vieno vykdymo ciklu. (Intel, n.d.) i960 80960KB procesorius užtikrina vidutinį komandų vykdymo greitį 7,5 milijono komandų per sekundę (7,5 MIPS) esant 20 MHz taktiniam dažniui. 10 milijonų komandų per sekundę (10 MIPS) esant 25 MHz taktiniam dažniui. (Bitsavers, 1988.)
 \subsection{Spartinančioji atmintis}
 \subsubsection{AN/UYK-43}
 AN/UYK-43 naudojo spartinančią atmintį siekiant padidinti našumą (32-bit Computers, Chapter 55, 2024). Kompiuterio spartinančioji atmintis turėjo iki 16384 32 bitų žodžių talpą. Ji veikė kaip didelės spartos buferis tarp procesoriaus ir pagrindinės atminties. (HP-9020C/AN/UYK-43 Study, 1987).
@@ -96,6 +99,8 @@ Yra emuliatorius: https://i960-emulator.software.informer.com/
 Emuliatoriaus nėra, nes įranga buvo naudojama JAV karinėje technikoje, todėl ne visa informacija yra viešai prieinama (Wikipedia, 2024).
 \section{References}
 \begin{itemize}
+
+\item Bitsavers, 1988. \textit{Intel 80960KB Programmer's Reference Manual.} Available at: \url{http://bitsavers.informatik.uni-stuttgart.de/components/intel/i960/80960KB_Programmers_Reference_Manual_Mar88.pdf} [Accessed 16 December 2024].
 \item CPU-World Forum, n.d. \textit{Intel i960 processor discussion.} Available at: \url{https://www.cpu-world.com/forum/viewtopic.php?p=74549} [Accessed 15 December 2024].
 \item Defense Technical Information Center, 1987. \textit{AN/UYK-43 Computer System Specifications.} Available at: \url{https://apps.dtic.mil/sti/tr/pdf/ADA188056.pdf} [Accessed 16 December 2024].
 \item Defense Technical Information Center, 1981. \textit{Issues Concerning the AN/UYK-43 and AN/UYK-44 computer development--
@@ -138,6 +143,8 @@ User’s Guide.} Available at: \url{https://datasheets.chipdb.org/Intel/80960/ma
 \item OpenAI, 2024. Response generated using ChatGPT. Question: "What was the typical amount of memory with which the system was used? Intel i960" Answer: "The typical amount of memory used with systems based on the Intel i960 varied depending on the application, as the processor was designed for embedded systems, networking devices, and military/aerospace applications. Here’s a breakdown of typical cases: Embedded Systems (Printers, Storage Controllers, Industrial Equipment) - Memory Range: 512 KB to 4 MB, networking Equipment (Routers, Network Interface Cards) - memory Range: 2 MB to 16 MB, Military and Aerospace Systems - memory Range: 16 MB to 64 MB or more" [Accessed on: 18 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
 
 \item OpenAI, 2024. Response generated using ChatGPT. Question: "Intel i960 Was fixed point or floating point supported by hardware and how?" Answer: "The Intel i960 microprocessor supported both fixed-point and floating-point arithmetic, but in different ways depending on the specific model of the i960 family. Fixed-Point Arithmetic: Always supported by hardware. Floating-Point Arithmetic: Supported by hardware in models with an integrated FPU, otherwise handled via software emulation." [Accessed on: 18 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
+
+\item OpenAI, 2024. Response generated using ChatGPT. Question: "What was the speed of AN/UYK-43 system? What were the clock frequencies, clock cycles per instruction, instruction rates?" Answer: "Specific technical details such as clock frequencies, cycles per instruction (CPI), and exact instruction rates are not extensively documented in publicly available sources" [Accessed on: 18 December 2024] [Version: 4o], from: \url{https://chat.openai.com/}
 
 \end{itemize}
 
