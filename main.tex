@@ -21,7 +21,7 @@ Intel i960 buvo sudarytas iš tranzistorių ir buvo labai didelio integracijos m
 
 \subsection{Architektūra}
 \subsubsection{AN/UYK-43}
-Kompiuterio CPU yra bendros paskirties mikroprogramuojamas valdiklis (MPC), kuris vykdo AN/UYK-43 instrukcijų rinkinio architektūrą (ISA) (HP-9020C/AN/UYK-43 Study, 1987). Todėl ji yra CISC pagrindo.
+Kompiuterio CPU yra bendros paskirties mikroprogramuojamas valdiklis (MPC), kuris vykdo AN/UYK-43 instrukcijų rinkinio architektūrą (ISA) (HP-9020C/AN/UYK-43 Study, 1987). AN/UYK-43 naudoja tiesioginio kodo kalbą, gautą iš CMS-2Y asemblerio kalbos. Ši sistema leidžia integruoti mašinos instrukcijas į CMS-2Y programas (Fleet combat direction systems support activity code 8, 1986.)
 \subsubsection{Intel i960}
 Architektūra yra registrinio pagrindo RISC (Wikipedia, 2024)
 \subsection{Adresų mašinos tipas}
@@ -56,9 +56,33 @@ Neturėjo virtualios atminties (Niekur nėra informacijos, kad architektūra tok
 \subsubsection{AN/UYK-43}
 Neturėjo virtualios atminties (Niekur nėra informacijos, kad architektūra tokią turėtų, todėl pasitikrinti buvo pateikta užklausa Chatgpt) "The AN/UYK-43, a ruggedized military computer introduced by the U.S. Navy in the 1980s, did not have virtual memory in the traditional sense used by modern general-purpose computers." (OpenAI, 2024).
 \subsection{Komandų sistema (ISA)}
+\subsubsection{AN/UYK-43}
+Komandų sistema: AN/UYK-43 naudoja tiesioginio kodo kalbą, gautą iš CMS-2Y asemblerio kalbos. Ši sistema leidžia integruoti mašinos instrukcijas į CMS-2Y programas. Instrukcijos yra suskirstytos į aritmetines ir logines operacijas, duomenų perkėlimo, srauto valdymo, sistemos ir specialiosios. [nenurodyta, kurias palaiko instrukcijas] Palaiko 220 instrukcijų (Fleet combat direction systems support activity code 8, 1986.) AN/UYK-43 kompiuterio instrukcijų rinkinys turi daugiau nei 220 pagrindinių pilno ir pusinio žodžio instrukcijų, kurios teikia operacijas tiesioginiam ir netiesioginiam atminties adresavimui, kintamo ilgio simbolių adresavimui bei privilegijuotam ir neprivilegijuotam vykdymui. (HP-9020C/AN/UYK-43 Study, 1987) Pavyzdžiai:
+\item SET A TO B \$
+\item MOVE A TO B \$
+\item PROCEDURE CHECKIT INPUT V1,V2 
+\item OUTPUT V3 \$
+\item END-PROC CHECKIT \$
+\item FUNCTION TPOS(AZM) A 12 S 5 \$
+\item SET ALPHA TO 3+AZM/4 \$
+\item IF ALPHA GT 0 THEN RETURN (ALPHA) \$
+\item ELSE RETURN (0) \$
+\item END-FUNCTION TPOS \$
+\subsubsection{Intel i960}
+Naudoja RISC komandų sistemą. (Wikipedia, 2024.) Instrukcijos yra suskirstytos į: duomenų judėjimo, aritmetinių (eilinių ir sveikųjų skaičių), loginių, bitų ir bitų laukų, palyginimo, šakojimosi, kvietimo / grįžimo, klaidų, derinimo, procesoriaus valdymo klases. 80960KB procesoriuje išplėčia esamas klases ir prideda naujas grupes: sveikųjų skaičių pavertimas realiaisiais, slankiojo kablelio, sinchroninio judėjimo ir įkrovimo, dešimtainės. (Bitsavers, 1988.) Palaikė šias instrukcijas: register-to-register, immediate, memory access - short, memory access - long, control transfer (Intel 80960KB Datasheet). Turi apie 150 - 200 instrukcijų (Bitsavers, 1988.). Pavyzdžiai: 
+\item addo g5, g9, g7
+\item subi r3, r5, r6
+\item lda 0xfab3, r12
+\item ld (r4), g3
+\item st g10, (r6)[r7*2]
+\item setbit 13, g4, g5
+\item muli g5, g6, g7
+\item bne g5, g6, target
+\subsubsection{Palyginimas}
+Skiriasi: AN/UYK-43: Daugiau aukšto lygio programavimo stiliaus, sintaksė labiau panaši į šiuolaikines programavimo kalbas, o
+i960 - mažo lygmens, asemblerio stiliaus, naudojant registrus ir tiesiogines atminties nuorodas. AN/UYK-43 reikalauja \$ simbolio eilutės pabaigoje, taip pat naudoja įprastus aritmetikos simbolius, vietoj tekstinių komandų. AN/UYK-43 turi kintamųjų deklaraciją, o i960 dirba su registrais. Panašumai: panašios, srauto instrukcijos, duomenų valdymas.
 \subsection{Adresavimo būdai}
 AN/UYK-43 palaikė šiuos adresavimo būdus: tiesioginis adresavimas, netiesioginis adresavimas, indeksuotas adresavimas, santykinis adresavimas, adreso poslinkio skaičiavimas. (CMS-2Y Programmer's Reference Manual for the AN/UYK-7 and AN/UYK-43, 1986.) O Intel i960 naudojo šiuos būdus: absoliutus adresavimas, registru netiesioginis adresavimas, registru netiesioginis su poslinkiu, registru netiesioginis su poslinkiu ir indeksu, indeksas su poslinkiu, instrukcijos rodyklės su poslinkiu. (Intel, 1997.) Panašūs buvo: netiesioginis adresavimas, indeksuotas adresavimas, tiesioginis ir absoliutus adresavimas. Skiriasi:  AN/UYK-43 leidžia derinti tiesiogiai koduojamus vardus ir adreso poslinkius, kas nėra aprašyta Intel i960, taip pat i960 leidžia derinti bazinį adresą, indeksą ir poslinkį, o AN/UYK-43 ne.
-
 \subsection{I/O galimybės}
 \subsubsection{AN/UYK-43}
 UYK-43 vis dar pripažįstamas kompiuterių pramonėje kaip vienas geriausių įrenginių, greitai ir efektyviai priimančių didelius išorinių jutiklių ir kitų duomenų srautus. Po to, kai centriniai procesoriai atlieka reikalingus skaičiavimus ir priima sprendimus, šią informaciją galima greitai perduoti žmogui. Situacijose, kai į laivą nukreipta raketa ar artėja priešo orlaivis, mikrosekundės tampa itin svarbios. Laiku priimti tikslūs ir greiti sprendimai gali išgelbėti gyvybes. (32-bit Computers, Chapter 52, 2024.) Yra  po 1 I/O valdiklį kiekvienam CPU su 32 I/O kanalais. I/O grandinimas (chaining) leidžiamas naudojant I/O valdiklį. (HP-9020C/AN/UYK-43 Study, 1987.)
@@ -70,7 +94,7 @@ AN/UYK-43 uvo naudojami pertraukimai (interrupts). Intel i960 irgi buvo naudojam
 \subsubsection{AN/UYK-43}
 Palaikė šiuos duomenų tipus: sveikasis skaičius, fiksuoto kablelio, slankiojo kablelio, simbolių tipas, loginis tipas (boolean). Ir egzotinius: statuso tipas (duomenys su baigtiniu reikšmių skaičiumi, neturinčiu jokios matematinės reikšmės), universalus tipas (bitų seka). Fiksuoto kablelio aritmetika buvo palaikoma naudojant nustatytą bitų skaičių, leidžiantį tiksliai atvaizduoti baigtines trupmenas. Slankiojo kablelio aritmetika buvo įgyvendinta su viengubo ir dvigubo tikslumo duomenų tipais, kurių ilgis buvo atitinkamai 32 ir 64 bitai. (Fleet combat direction systems support activity code 8, 1986.)
 \subsubsection{Intel i960}
-Palaikė šiuos duomenų tipus: bitas, bitų laukai, sveikasis skaičius (8, 16, 32, 64 bitų), įprastas skaičius (8, 16, 32, 64 bitų sveikasis skaičius be ženklo), trigubas žodis (96 bitai), keturgubas žodis (128 bitai). Procesorius palaiko fiksuoto kablelio aritmetiką naudodamas dvejeto papildinio kodavimą sveikiesiems skaičiams. (Intel, n.d.) Intel i960 mikroprocesorius palaikė tiek fiksuotojo, tiek slankiojo kablelio aritmetiką, tačiau tai priklausė nuo konkretaus i960 šeimos modelio. Fiksuotojo kablelio aritmetika visada buvo palaikoma aparatine įranga, o slankiojo kablelio aritmetika palaikoma aparatine įranga modeliuose su integruotu FPU (slankiojo kablelio bloku). Modeliuose be FPU slankiojo kablelio operacijos buvo atliekamos programinės emuliacijos būdu. (OpenAI, 2024.)
+Palaikė šiuos duomenų tipus: bitas, bitų laukai, sveikasis skaičius (8, 16, 32, 64 bitų), eilinių skaičius (8, 16, 32, 64 bitų sveikasis skaičius be ženklo), trigubas žodis (96 bitai), keturgubas žodis (128 bitai). Procesorius palaiko fiksuoto kablelio aritmetiką naudodamas dvejeto papildinio kodavimą sveikiesiems skaičiams. (Intel, n.d.) Intel i960 mikroprocesorius palaikė tiek fiksuotojo, tiek slankiojo kablelio aritmetiką, tačiau tai priklausė nuo konkretaus i960 šeimos modelio. Fiksuotojo kablelio aritmetika visada buvo palaikoma aparatine įranga, o slankiojo kablelio aritmetika palaikoma aparatine įranga modeliuose su integruotu FPU (slankiojo kablelio bloku). Modeliuose be FPU slankiojo kablelio operacijos buvo atliekamos programinės emuliacijos būdu. (OpenAI, 2024.)
 \subsection{Greitaveika}
 \subsubsection{AN/UYK-43}
 Informacijos internete rasti nepavyko. Specifinės techninės detalės, tokios kaip taktinių generatorių dažniai, ciklų skaičius vienai komandai (CPI) ir tikslūs komandų vykdymo greičiai, nėra plačiai dokumentuotos viešai prieinamuose šaltiniuose. (OpenAI, 2024.)
